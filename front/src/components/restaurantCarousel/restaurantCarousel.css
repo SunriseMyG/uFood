@@ -1,0 +1,409 @@
+
+
+.carousel-container {
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0 10px;
+  position: relative;
+}
+
+.carousel-wrapper {
+  position: relative;
+  margin: 0 -10px;
+}
+
+.carousel-container h3 {
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+.carousel-slide {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.carousel-slide-inner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-empty {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--background-light);
+  border-radius: 15px;
+  border: 2px solid rgba(212, 165, 116, 0.2);
+}
+
+.carousel-empty p {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  opacity: 0.7;
+  margin: 0;
+}
+
+.carousel-container .slick-slider {
+  position: relative;
+}
+
+.carousel-container .slick-list {
+  overflow: hidden;
+  padding: 0 ;
+}
+
+.carousel-container .slick-track {
+  display: flex;
+  align-items: stretch;
+  min-height: 400px;
+}
+
+.carousel-container .slick-slide {
+  height: inherit ;
+}
+
+.carousel-container .slick-slide > div {
+  height: 100%;
+}
+
+.carousel-container .slick-dots {
+  bottom: -60px;
+  display: flex ;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.carousel-container .slick-dots li {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+}
+
+.carousel-container .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.carousel-container .slick-dots li button:before {
+  content: '•';
+  color: rgba(212, 165, 116, 0.5);
+  font-size: 16px;
+  line-height: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.carousel-container .slick-dots li.slick-active button:before {
+  color: var(--primary-color);
+}
+
+.carousel-container .slick-dots li:hover button:before {
+  color: var(--primary-color);
+}
+
+.carousel-container .slick-prev,
+.carousel-container .slick-next {
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--background-light);
+  border: 2px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+.carousel-container .slick-prev:hover,
+.carousel-container .slick-next:hover {
+  background: var(--primary-color);
+}
+
+.carousel-container .slick-prev {
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-container .slick-next {
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-container .slick-prev:before,
+.carousel-container .slick-next:before {
+  color: var(--primary-color);
+  font-size: 20px;
+  line-height: 1;
+  transition: var(--transition);
+}
+
+.carousel-container .slick-prev:hover:before,
+.carousel-container .slick-next:hover:before {
+  color: var(--text-light);
+}
+
+.carousel-container .slick-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.carousel-container .slick-disabled:hover {
+  background: var(--background-light);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1280px) {
+  .carousel-container {
+    padding: 0 5px;
+  }
+  
+  .carousel-slide {
+    padding: 0 10px;
+  }
+  
+  .carousel-container .slick-prev {
+    left: -30px;
+  }
+  
+  .carousel-container .slick-next {
+    right: -30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .carousel-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .carousel-slide {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 0;
+  }
+  
+  .carousel-wrapper {
+    margin: 0;
+  }
+  
+  .carousel-slide {
+    padding: 0 5px;
+  }
+  
+  .carousel-container .slick-prev {
+    left: -25px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-container .slick-next {
+    right: -25px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-container .slick-prev:before,
+  .carousel-container .slick-next:before {
+    font-size: 16px;
+  }
+  
+  .carousel-container h3 {
+    font-size: 1.6rem;
+  }
+  
+  .carousel-container .slick-track {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-container .slick-prev {
+    left: -20px;
+  }
+  
+  .carousel-container .slick-next {
+    right: -20px;
+  }
+  
+  .carousel-container .slick-dots {
+    bottom: -50px;
+  }
+  
+  .carousel-container .slick-track {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    margin: 1rem 0;
+    padding: 0 15px ;
+    overflow: hidden;
+  }
+  
+  .carousel-wrapper {
+    margin: 0 ;
+    overflow: hidden;
+  }
+  
+  .carousel-container h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel-container.mobile-carousel .slick-list {
+    overflow: hidden ;
+    padding: 0 ;
+    margin: 0 ;
+  }
+  
+  .carousel-container.mobile-carousel .slick-track {
+    min-height: 480px ;
+    display: flex ;
+    align-items: stretch ;
+  }
+  
+  .carousel-container.mobile-carousel .carousel-slide {
+    padding: 0 ;
+    width: 100% ;
+  }
+  
+  .carousel-container.mobile-carousel .carousel-slide-inner {
+    width: 100% ;
+    display: flex ;
+    justify-content: center ;
+  }
+
+  .carousel-container.mobile-carousel .slick-slide {
+    opacity: 1 ;
+    transform: none ;
+  }
+  
+  .user-page .carousel-container.mobile-carousel .restaurant-card {
+    height: auto ;
+    min-height: 500px ;
+    max-height: none ;
+  }
+  
+  .user-page .carousel-container.mobile-carousel .restaurant-card-content {
+    height: auto ;
+    min-height: auto ;
+  }
+  
+  .user-page .carousel-container.mobile-carousel .slick-slide {
+    height: auto ;
+    min-height: 480px ;
+  }
+  
+  .user-page .carousel-container.mobile-carousel .slick-slide > div {
+    height: auto ;
+    min-height: 480px ;
+  }
+  
+  .user-page .carousel-container.mobile-carousel .carousel-slide-inner {
+    height: auto ;
+    min-height: 480px ;
+    padding-top: 0 ;
+  }
+
+  .user-page .carousel-container.mobile-carousel .restaurant-info {
+    gap: 0.4rem ;
+    margin-bottom: 0.8rem ;
+  }
+  
+  .user-page .carousel-container.mobile-carousel .info-item {
+    font-size: 0.85rem ;
+  }
+  
+  .user-page .carousel-container.mobile-carousel .genres {
+    margin: 0.3rem 0 ;
+    padding: 0.25rem 0.6rem ;
+    font-size: 0.75rem ;
+  }
+  .carousel-container .slick-prev,
+  .carousel-container .slick-next {
+    display: none ;
+  }
+  
+  .carousel-container .slick-dots {
+    bottom: -40px;
+  }
+  
+  .carousel-container .slick-dots li button:before {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .carousel-container h3 {
+    font-size: 1.2rem;
+  }
+  
+  .carousel-container.mobile-carousel {
+    padding: 0 10px ;
+  }
+  
+  .carousel-container.mobile-carousel .slick-track {
+    min-height: 550px ;
+  }
+  
+  .user-page .carousel-container.mobile-carousel .restaurant-card {
+    min-height: 480px ;
+  }
+  
+  .user-page .carousel-container.mobile-carousel .slick-slide {
+    min-height: 550px ;
+  }
+  
+  .user-page .carousel-container.mobile-carousel .slick-slide > div {
+    min-height: 550px ;
+  }
+  
+  .user-page .carousel-container.mobile-carousel .carousel-slide-inner {
+    min-height: 550px ;
+  }
+  
+  .carousel-empty {
+    padding: 2rem 1rem;
+  }
+  
+  .carousel-empty p {
+    font-size: 1rem;
+  }
+}
+
+.carousel-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
